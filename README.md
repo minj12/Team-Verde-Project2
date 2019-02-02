@@ -1,5 +1,11 @@
-## *Team Green Project 2*
+## **PROJECT 2** *REDDI-GRAM*
 
-# Team Green presents *Reddi-Gram*
+### Created by Team Green
+* Chris  
+* Dylan
+* Allah 
+* Syed
+* Min
 
-### About
+### About *Reddi-Gram*
+A social media app where a user may navigate through posted images and can up-vote and down-vote images.
