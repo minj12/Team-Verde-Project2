@@ -3,6 +3,11 @@
   padding:0;
 }
 
+img {
+  width: 20em;
+  height: 12em;
+}
+
 .landingpage{
   height: 65vh;
   width: 100%;
