@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": null,
-    "database": "exampledb",
+    "password": "alahamid980@",
+    "database": "reddi-gram",
     "host": "localhost",
     "dialect": "mysql"
   },
