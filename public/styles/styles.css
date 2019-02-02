@@ -1,3 +1,23 @@
-.list-group-item {
-  line-height: 2.5;
+*{
+  margin:0;
+  padding:0;
+}
+
+.landingpage{
+  height: 50vh;
+  width: 100%;
+  background:url(https://png.pngtree.com/thumb_back/fw800/back_pic/04/56/12/0958650ae873d40.jpg);
+
+}
+
+.navbarNavbar2 a{
+  color: rgb(0, 0, 0) !important;
+}
+.navbarNavbar2 ul li{
+  color: white !important;
+}
+
+#mainNav{
+  background: white;
+  color: black;
 }
