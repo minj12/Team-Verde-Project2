@@ -88,3 +88,97 @@ a.button {
   text-decoration: none;
   color: initial;
 }
+/*
+    @hiercelik - hiercelik.net
+    @koalapix - koalapix.com
+*/
+@import url(//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css);
+@import url(http://fonts.googleapis.com/css?family=Titillium+Web&subset=latin,latin-ext);
+@media (min-width: 768px) {
+    .kpx_row-sm-offset-3 div:first-child[class*="col-"] {
+        margin-left: 25%;
+    }
+}
+body {
+    font-family: 'Titillium Web', sans-serif; 
+}
+a{
+    color:#ff5400;
+}
+a:hover {
+    opacity: 0.8;
+    color:#ff5400;
+    text-decoration:none;
+}
+.kpx_login .kpx_authTitle {
+    text-align: center;
+    line-height: 300%;
+}
+    
+.kpx_login .kpx_socialButtons a {
+    color: white; 
+	opacity:0.9;
+}
+.kpx_login .kpx_socialButtons a:hover {
+    color: white;
+	opacity:1;    	
+}
+.kpx_login .kpx_socialButtons .kpx_btn-google-plus {background: #c32f10; -webkit-transition: all 0.5s ease-in-out;
+     -moz-transition: all 0.5s ease-in-out;
+       -o-transition: all 0.5s ease-in-out;
+          transition: all 0.5s ease-in-out;}
+.kpx_login .kpx_socialButtons .kpx_btn-google-plus:hover {background: #6b1301}
+.kpx_login .kpx_socialButtons .kpx_btn-google-plus:focus {background: #fff; color: #c32f10; border-color: #c32f10}
+@media (min-width: 768px) {
+    .kpx_login .kpx_forgotPwd {
+        text-align: right;
+		margin-top:10px;
+ 	}		
+}
+.instagram-wrap {
+  background: $lightgrey;
+}
+
+.instagram-content {
+  h3 {
+      text-transform: uppercase;
+      letter-spacing: 0.5em;
+      font-size: 12px;
+      font-weight: 700;
+      text-align: center;
+      padding: $padding*5 0;
+      color: darken($lightgrey, 20%);
+  }
+
+}
+.photo-box {
+  margin: 0 0 $margin*3 0;
+
+  .image-wrap {
+      img {
+          width: 100%;
+      }
+
+      .likes {
+          position: absolute;
+          bottom: 5px;
+          left: 15px;
+          padding: $padding/2;
+          background: $black;
+          background: rgba($black, 0.4);
+          color: $white;
+      }
+  }
+  .description {
+      font-family: $sub-font;
+      font-size: 12px;
+      background: $white;
+      color: $mediumgrey;
+      letter-spacing: 1px;
+      padding: $padding*1.5;
+      height: 75px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+  }
+}

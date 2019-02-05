@@ -1,6 +1,7 @@
 var db = require("../models");
 
 module.exports = function(app) {
+  
   app.get("/", function(req, res) {
     db.Example.findAll({
       order: sequelize.literal('vote DESC')
