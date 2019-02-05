@@ -1,5 +1,4 @@
-# **PROJECT 2**
-# *REDDI-GRAM*
+# **PROJECT 2** | *REDDI-GRAM*
 
 ### Created by Team Green
 * Chris  
@@ -18,9 +17,10 @@ npm install mysql2 sequelize express express-handlebars parser
 ```
 
 ## Technologies
-* MySQL
-* Node.js
-* Jquery/JavaScript
 
-### New Technologies
-* Google Cloud
+  | Sound Tech        |     New Tech      |
+  | ------------------|:-----------------:|
+  | MySQL             | Google Cloud      | 
+  | Node.js           | Cloudinary        |   
+  | Jquery/JavaScript |                   |  
+  |                   |                   |
