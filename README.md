@@ -24,3 +24,6 @@ npm install mysql2 sequelize express express-handlebars parser
   | Node.js           | Cloudinary        |   
   | Jquery/JavaScript |                   |  
   |                   |                   |
+  
+  
+<p>&copy; 2019 Reddigram<p>
