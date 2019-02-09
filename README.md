@@ -18,12 +18,13 @@ npm install mysql2 sequelize express express-handlebars parser
 
 ## Technologies
 
-  | Sound Tech        |     New Tech      |
-  | ------------------|:-----------------:|
-  | MySQL             | Google Cloud      | 
-  | Node.js           | Cloudinary        |   
-  | Jquery/JavaScript |                   |  
-  |                   |                   |
+  | Sound Tech            |     New Tech      |
+  | ----------------------|:-----------------:|
+  | MySQL                 | Google Cloud      | 
+  | Node.js               |                   |
+  | Jquery/JavaScript     | animate.css       |  
+  | Cascading Style Sheets|                   |
+  | Bootstrap             |                   |
   
   
 <p>&copy; 2019 Reddigram<p>
