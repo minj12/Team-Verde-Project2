@@ -22,8 +22,8 @@ npm install mysql2 sequelize express express-handlebars parser
   | ----------------------|:-----------------:|
   | MySQL                 | Google API        | 
   | Node.js               | Cookie Parser     |
-  | Handlebars            |  animate.css      |
-  | Jquery/JavaScript     |                   |  
+  | Handlebars            | animate.css       |
+  | Jquery/JavaScript     | Cloudinary        |  
   | Cascading Style Sheets|                   |
   | Bootstrap             |                   |
   |                       |                   |
