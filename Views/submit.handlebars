@@ -1,63 +1,45 @@
 
-    <div class="container-fluid landingpageP">
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-            <div class="container navbarNavbar2">
-                <a class="navbar-brand js-scroll-trigger" href="#page-top">REDDIGRAM</a>
-                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-                    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="/home/{{userId}}">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="/contact/{{userId}}">Contact</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="/logout">Log Out</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </div>
+{{>headers/post}}
+{{>navbar/nav}}
+
     <!-- END OF NAVIGATION -->
 
-<div class="container">
-<div style="display:none">
-    <input type="text" id="this_user" value="{{userId}}" hidden>
-</div>
-    <div class="container-fluid" id="main-container">
-        <section class="main-section">
-            <h1>Reddi-A-Gram </h1>
-            <form id="contact-form" class="create-form">
-                <ul>
-                    <li>
-                        <label for="author">Author</label>
-                        <input type="text" id="author" name="author" placeholder="John Smith" required="required">
-                    </li>
-                    <li>
-                        <label for="caption">Caption</label>
-                        <input type="text" id="caption"  placeholder="caption" required="required">
-                    </li>
-                <li>
-                        <label for="image">Caption</label>
-                        <input type="text" id="image_url"  placeholder="image url" required="required">
-                    </li>
-                </ul>
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
 
-            {{!-- <form>
-                <div class="form-group">
-                  <label for="exampleFormControlFile1">Example file input</label>
-                  <input type="file" class="form-control-file" id="exampleFormControlFile1">
-                </div>
-              </form> --}}
+    <!-- jumbotron header -->
+    <div class="jumbotron container mb-0">
+        <h1 class="display-1 text-center"></h1>
+        <hr class="my-4">
+        <div class="container">
+            <div style="display:none">
+                <input type="text" id="this_user" value="{{userId}}" hidden="">
+                <input type="text" id="author" value="{{thisUserName}}" hidden>
+            </div>
+            <!-- div for the main container holding the form -->
+            <div class="container-fluid" id="main-container">
+                <section class="main-section text-center">
+                    <h1>Post a Reddigram for people to up-vote to the highest heavens or down-vote into oblivion.</h1>
+                    <form id="contact-form" class="create-form">
+                        <h3>Just upload you image by clicking this tiny little icon bellow</h3>
+                        <ul>
+                            <li class="center" >
+                                <label for="file-upload">
+                                    <i class="fas fa-upload"></i></label>
+                                <input type="file" id="file-upload" style="display: none">
+                                
+                            </li>
+                            <li>
+                                <h3>Then write the story behind this beatiful picture</h3>
+                                <label for="caption"></label>
+                                <input type="text" id="caption" placeholder="write a caption that captures hearts" required="required">
+                            </li>
+                            <li class="text-center" >
+                                                        <button type="submit" class="btn btn-primary">Submit</button>
 
-        </section>
+                            </li>
+                        </ul>
+                    </form>
+
+                </section>
+            </div>
+        </div>
     </div>
-</div>
-  

@@ -1,0 +1,133 @@
+
+
+
+.heartBeat {
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-iteration-count: 2;
+}
+
+
+
+a:hover {
+    font-weight:bold;
+}
+a::after {
+    display: block;
+    content: attr(title);
+    font-weight: bold;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+/* 
+img {
+  width: 20em;
+  height: 12em;
+} */
+
+
+
+
+/* NAVBAR */
+.navbarNavbar2 a{
+  color: rgb(0, 0, 0) !important;
+}
+.navbarNavbar2 ul li{
+  color: white !important;
+}
+
+#mainNav{
+  background: white;
+  color: black;
+}
+
+/* END OF NAVBAR */
+
+
+/* CONTACT FORM */
+#contact-form ul {
+  margin-bottom: 20px;
+}
+
+#contact-form li {
+  margin-bottom: 10px;
+}
+
+label,
+input[type=text],
+input[type=email],
+textarea {
+  display: block;
+  width: 100%;
+}
+
+input[type=text],
+input[type=email],
+textarea {
+  height: 35px;
+  padding: 0 10px;
+  font-size: 14px;
+  border: 1px solid #dddddd;
+}
+
+textarea {
+  height: 200px;
+}
+
+input[type=submit] {
+  padding: 10px 30px;
+  font-size: 18px;
+  color: #ffffff;
+  cursor: pointer;
+  background: #4aaaa5;
+  border: 0 none;
+}
+
+a.button {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  text-decoration: none;
+  color: initial;
+}
+/* END OF CONTACT FORM */
+
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 768px) {
+  .landingpage{
+    height: 65vh;
+    width: 100%;
+    background:url(https://images.thoughtbot.com/blog+animations/animation-direction.gif);
+    background-size: 180vh;
+    background-position-x: -500px;
+    background-position-y: -200px;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .landingpage{
+    height: 65vh;
+    width: 100%;
+    background:url(https://images.thoughtbot.com/blog+animations/animation-direction.gif);
+    background-size: 180vh;
+    background-position-x: -595px;
+    background-position-y: -200px;
+  }
+}
+
+.loginBtn{
+  background: rgb(67,129,182);
+  color: white;
+  border: 1px solid;
+  box-shadow: 5px 5px 5px #dfdede;
+}
+
+
+.loginBtn:hover{
+  background: rgb(251, 227, 175);
+  color: black;
+  border: 1px solid;
+  box-shadow: 10px 10px  #dfdede;
+}
+

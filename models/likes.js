@@ -4,7 +4,8 @@ module.exports = function(sequelize, DataTypes) {
     {
       userId: DataTypes.STRING,
       postId: DataTypes.STRING,
-      isLiked: DataTypes.BOOLEAN
+      isLiked: DataTypes.BOOLEAN,
+      disLiked: DataTypes.BOOLEAN
     },
     {
       freezeTableName: true

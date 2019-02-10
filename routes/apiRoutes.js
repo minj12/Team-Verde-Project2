@@ -47,29 +47,57 @@ module.exports = function(app) {
     }),
     (req, res) => {
       req.session.token = req.user.token;
-      res.redirect("/home/" + req.user.profile.id);
+      res.redirect(
+        "/home/" +
+          req.user.profile.id +
+          "/" +
+          req.user.profile.name.givenName +
+          req.user.profile.name.familyName
+      );
     }
   );
+  app.get("/home/:id/:name", (req, res) => {
+    let userId = req.params.id;
+    let name = req.params.name;
+    db.Post.findAll({
+      order: [["vote", "DESC"]]
+    }).then(result => {
+      res.render("home", {
+        posts: result,
+        userId: userId,
+        thisUserName: name
+      });
+    });
+  });
   app.get("/home/:id", (req, res) => {
     let userId = req.params.id;
     db.Post.findAll({
       order: [["vote", "DESC"]]
     }).then(result => {
-      res.render("home", { posts: result, thisUserId: userId });
+      res.render("home", {
+        posts: result,
+        thisUserId: userId
+      });
     });
   });
-  app.get("/submit/:id", (req, res) => {
+  app.get("/submit/:id/:author", (req, res) => {
     let userId = req.params.id;
-    res.render("submit", { userId: userId });
+    let name = req.params.author;
+    res.render("submit", { userId: userId, thisUserName: name });
   });
-  app.post("/api/posts/:id", function(req, res) {
+  app.post("/api/posts/:id/:name", function(req, res) {
     db.Post.create(req.body).then(function(dbPost) {
-      res.render("home", { posts: dbPost, thisUserId: req.params.id });
+      res.render("home", {
+        posts: dbPost,
+        thisUserId: req.params.id,
+        thisUserName: req.params.name
+      });
     });
   });
-  app.get("/contact/:id", (req, res) => {
+  app.get("/contact/:id/:author", (req, res) => {
     let userId = req.params.id;
-    res.render("contact", { userId: userId });
+    let name = req.params.author;
+    res.render("contact", { userId: userId, thisUserName: name });
   });
   app.get("/api/increment/:id", function(req, res) {
     db.Post.update(
@@ -97,10 +125,38 @@ module.exports = function(app) {
       }
     })
       .then(result => {
-        if (!result.isLiked) {
+        if (!result.isLiked && !result.disLiked) {
           res.redirect("/api/like/" + result.id);
-        } else {
-          res.status(200).end();
+        } else if (result.isLiked) {
+          db.Likes.update(
+            {
+              isLiked: false,
+              disLiked: false
+            },
+            {
+              where: {
+                userId: userId,
+                postId: postId
+              }
+            }
+          ).then(() => {
+            res.redirect("/api/decrement/" + postId);
+          });
+        } else if (result.disLiked) {
+          db.Likes.update(
+            {
+              isLiked: false,
+              disLiked: false
+            },
+            {
+              where: {
+                userId: userId,
+                postId: postId
+              }
+            }
+          ).then(() => {
+            res.redirect("/api/increment/" + postId);
+          });
         }
       })
       .catch(() => {
@@ -119,10 +175,38 @@ module.exports = function(app) {
       }
     })
       .then(result => {
-        if (result.isLiked) {
+        if (!result.isLiked && !result.disLiked) {
           res.redirect("/api/dislikes/" + result.id);
-        } else {
-          res.status(200).end();
+        } else if (result.isLiked) {
+          db.Likes.update(
+            {
+              isLiked: false,
+              disLiked: false
+            },
+            {
+              where: {
+                userId: userId,
+                postId: postId
+              }
+            }
+          ).then(() => {
+            res.redirect("/api/decrement/" + postId);
+          });
+        } else if (result.disLiked) {
+          db.Likes.update(
+            {
+              isLiked: false,
+              disLiked: false
+            },
+            {
+              where: {
+                userId: userId,
+                postId: postId
+              }
+            }
+          ).then(() => {
+            res.redirect("/api/increment/" + postId);
+          });
         }
       })
       .catch(() => {
@@ -134,7 +218,7 @@ module.exports = function(app) {
   app.get("/api/like/:id", (req, res) => {
     let id = req.params.id;
     db.Likes.update(
-      { isLiked: true },
+      { isLiked: true, disLiked: false },
       {
         where: {
           id: id
@@ -150,7 +234,7 @@ module.exports = function(app) {
   app.get("/api/dislikes/:id", (req, res) => {
     let id = req.params.id;
     db.Likes.update(
-      { isLiked: false },
+      { isLiked: false, disLiked: true },
       {
         where: {
           id: id
