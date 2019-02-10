@@ -4,7 +4,7 @@
 <div class="container-fluid mt-5 all">
     <input type="text" id="user_id" hidden value="{{userId}}">
     <input type="text" id="user_id" hidden value="{{thisUserName}}">
-    <div style="background: rgba(255,255,255,1.0);" class="col-md-5">
+    <div style="background: rgba(255,255,255,1.0);" class="col-md-5">   
         {{#if posts}}
         {{#each posts}}
         <div style="margin-top:10px;background:rgba(7, 60, 152, 0.4)" class="panel panel-default">
@@ -14,9 +14,7 @@
                         <div class="col-md-12">
                             <div class="media">
                                 <div class="media-body">
-
                                     <h4 class="media-heading">{{this.author}}</h4>
-
                                 </div>
                             </div>
                         </div>

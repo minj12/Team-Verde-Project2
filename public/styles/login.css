@@ -5,16 +5,11 @@ a{
 
 body{
   font-family:'helvetica';
-     background: url(/styles/images/bg.jpg); 
-
-   
+  background: url(/styles/images/bg.jpg); 
   background-size: cover;   
   background-attachment: fixed;
   background-position-x: -500px;
 }
-
-/*-- Bootstrap Override Style --*/
-
 
 /*-- Content Style --*/
 .post-footer-option li{
