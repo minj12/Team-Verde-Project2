@@ -101,6 +101,7 @@ module.exports = function(app) {
   app.post("/api/like/", (req, res) => {
     let postId = req.body.postId;
     let userId = req.body.userId;
+    //search the Likes table if this post and user are exist
     db.Likes.findOne({
       where: {
         userId: userId,
@@ -108,9 +109,13 @@ module.exports = function(app) {
       }
     })
       .then(result => {
+        //if the user and post are exist and there is no like or dislike for the post
         if (!result.isLiked && !result.disLiked) {
+          //then make isLike as true
           res.redirect("/api/like/" + result.id);
+          //else if the user already liked the post 
         } else if (result.isLiked) {
+          //just reset the isLiked and disLiked to false
           db.Likes.update(
             {
               isLiked: false,
@@ -123,9 +128,12 @@ module.exports = function(app) {
               }
             }
           ).then(() => {
+            //then decrement the vote
             res.redirect("/api/decrement/" + postId);
           });
+          //if the post is already disliked by the user
         } else if (result.disLiked) {
+          //then just reset liked and disliked to false
           db.Likes.update(
             {
               isLiked: false,
@@ -138,11 +146,13 @@ module.exports = function(app) {
               }
             }
           ).then(() => {
+            //and then increment the post votes
             res.redirect("/api/increment/" + postId);
           });
         }
       })
       .catch(() => {
+        //if the post is not found in the Likes table then create it
         db.Likes.create(req.body).then(() => {
           res.redirect("/api/increment/" + postId);
         });
