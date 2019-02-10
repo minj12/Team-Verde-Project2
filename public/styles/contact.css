@@ -2,6 +2,8 @@ body{
   background: url(https://www.forthcapital.com/wp-content/uploads/2016/05/World-Map-Dark.jpg);
   background-size: cover;
   background-position-y: -40px;
+  background-position-x: 10px;
+
   margin:0;
   padding: 0;
 }
@@ -17,6 +19,8 @@ body{
 
 .connect{
   border-top: 2px solid black;
+  margin-top: 150px;
+  margin-bottom: 0;
 }
 
 .fun{
