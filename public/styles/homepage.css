@@ -1,5 +1,12 @@
+*{
+  margin:0;
+  padding:0;
+}
 
-
+#mainNav{
+  font-weight: 500;
+  box-shadow: 1px 1px  #c8c8c89d;
+}
 
 .heartBeat {
   animation-duration: 1s;
@@ -7,7 +14,14 @@
   animation-iteration-count: 2;
 }
 
+.nav-item:hover{
+  background: rgb(250, 233, 197);
+}
 
+  .nav-item{
+    display:inline-block;
+    text-align:center;
+}
 
 a:hover {
     font-weight:bold;
@@ -20,13 +34,49 @@ a::after {
     overflow: hidden;
     visibility: hidden;
 }
-/* 
+
 img {
   width: 20em;
   height: 12em;
-} */
+}
 
+/* LANDING PAGE */
+.landingpage{
+  height: 55vh;
+  width: 100%;
+  border: 1px solid;
+  box-shadow: 7px 7px  #dfdede;
+  background:url(https://images.thoughtbot.com/blog+animations/animation-direction.gif);
+  background-size: cover;
+  background-position-x: 20px;
+  background-position-y: -450px;
+  background-attachment: fixed;
+}
 
+.landingpageP{
+  height: 70vh;
+  width: 100%;
+  background:url(https://www.valuecoders.com/blog/wp-content/uploads/2017/12/chatbots-AI.gif);
+  background-size: cover;
+  background-position-x: 20px;
+ 
+}
+.landingpageC{
+  height: 65vh;
+  width: 100%;
+  background:url(http://www.shrishishubhawan.com/assets/images/shishu_contact/shishu_contact.gif);
+  background-size: cover;
+  background-position-x: 80px;
+  background-position-y: 70px;
+}
+
+.funStuff{
+ position: absolute;
+ top: 70%;
+  width:flex;
+  font-family: 'Noto Serif SC', serif;
+}
+/* END OF LANDING PAGE */
 
 
 /* NAVBAR */
@@ -122,7 +172,6 @@ a.button {
   border: 1px solid;
   box-shadow: 5px 5px 5px #dfdede;
 }
-
 
 .loginBtn:hover{
   background: rgb(251, 227, 175);

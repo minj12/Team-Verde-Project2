@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "alahamid980@",
+    "password": "Mysql123.",
     "database": "reddigram",
     "host": "localhost",
     "dialect": "mysql"
