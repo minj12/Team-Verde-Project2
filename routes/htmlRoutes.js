@@ -1,4 +1,4 @@
-
+let db = require("../models");
 module.exports = function(app) {
   app.get("/submit/:id/:author", (req, res) => {
     let userId = req.params.id;

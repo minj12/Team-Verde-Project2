@@ -3,42 +3,38 @@
 {{>navbar/nav}}
 
 
-    <!-- jumbotron header -->
-    <div class="jumbotron container mb-0">
-        <h1 class="display-1 text-center"></h1>
-        <hr class="my-4">
-        <div class="container">
-            <div style="display:none">
+    <div class="row">
+
+        <div  class=" animated fadeIn slow col-lg-12 col-md-6 col-sm-12 xol-xs-12
+        text-center">
+            <img src="https://media.giphy.com/media/12WawXb61sDRMA/giphy.gif" style="width:250px;height:250px;"
+                class="imgForm"><br><br>
+              <h3 class="text-center" style="color: red">Post a Reddigram for people to up-vote to the highest heavens or down-vote into oblivion.</h3>
+            
+        </div>
+</div>
+<div class="row">
+        <div class=" container-fluid formPage animated fadeIn slow text-center col-lg-6 col-md-6 col-sm-12 xol-xs-12
+        " style="width:30%;margin:0 auto;">
+         <div style="display:none">
                 <input type="text" id="this_user" value="{{userId}}" hidden="">
                 <input type="text" id="author" value="{{thisUserName}}" hidden>
             </div>
-            <!-- div for the main container holding the form -->
-            <div class="container-fluid" id="main-container">
-                <section class="main-section text-center">
-                    <h1>Post a Reddigram for people to up-vote to the highest heavens or down-vote into oblivion.</h1>
-                    <form id="contact-form" class="create-form">
-                        <h3>Just upload you image by clicking this tiny little icon bellow</h3>
-                        <ul>
-                            <li class="center" >
-                                <label for="file-upload">
-                                    <i class="fas fa-upload"></i></label>
-                                <input type="file" id="file-upload" style="display: none">
-                                
-                            </li>
-                            <li>
-                                <h3>Then write the story behind this beatiful picture</h3>
-                                <label for="caption"></label>
-                                <input type="text" id="caption" placeholder="write a caption that captures hearts" required="required">
-                            </li>
-                            <li class="text-center" >
-                                                        <button type="submit" class="btn btn-primary">Submit</button>
-
-                            </li>
-                        </ul>
-                    </form>
-
-                </section>
-            </div>
+            <form action="/posts" method="POST">
+               
+                <div class="form-group">
+                    <h4>Just upload you image by clicking this tiny little icon bellow</h4>
+                     <label for="file-upload">
+                        <i class="fas fa-upload"></i></label>
+                    <input type="file" id="file-upload" style="display: none">
+                </div>
+                <div style="margin: auto !important" class="form-group shadow-textarea">
+                    <label for="exampleFormControlTextarea6">Then write the story behind this beatiful picture</label>
+                    <textarea id="caption" class="form-control z-depth-1" id="exampleFormControlTextarea6" rows="3"
+                        placeholder="Write something here..."></textarea>
+                </div><br>
+                <button type="button" class="btn loginBtn">Post</button>
+            </form>
+ 
         </div>
-    </div>
-
+</div>
