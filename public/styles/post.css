@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css?family=Lora:400,400i|Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab');
+
+body,
+.postnav {
+  font-family: 'Roboto Slab', serif;
+  /* background-color: rgba(248, 244, 202, 0.212); */
+  background-image: url("/styles/images/forest.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgb(10, 7, 53);
+}
+
+navbar-nav > a:hover {
+  color: yellow;
+  padding: yellow;
+}
+
+
+.jumbotron {
+  background-color: rgba(0, 0, 0, .001);
+}
+
+#main-container {
+  opacity: 100%;
+  color: black;
+}
+
+hr {
+  background: white;
+}
+
+ul {
+  list-style-type: none;
+}
+
+input {
+  box-shadow: none;
+  width: 50%;
+  height: 25px;
+  padding: 20px;
+  margin: 5px;
+  border: solid 1px grey;
+  text-align: center;
+}
+
+.main-section h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-style: italic;
+}
+
+.btn-primary {
+  background-color: rgb(1, 94, 6);
+  border: none;
+  color:white;
+}
+
+.btn-primary:hover {
+  background-color: white;
+  color: rgb(48, 47, 47)
+}
+
+input::placeholder {
+  text-align: center;
+  color: rgba(0, 0, 0, .5);
+  font-style: italic;
+}

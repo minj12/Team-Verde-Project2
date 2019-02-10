@@ -8,7 +8,9 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 var db = require("./models");
 
-var PORT = process.env.PORT || 3000;
+
+var PORT = process.env.PORT || 7500;
+
 
 // Middleware
 app.use(express.urlencoded({ extended: false }));
