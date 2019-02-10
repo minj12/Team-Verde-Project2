@@ -1,13 +1,7 @@
 
 {{>headers/homes}}
-   
-    <!-- END OF NAVIGATION -->
-<link rel="stylesheet" href="/styles/login.css">
+{{>navbar/nav}}
 
-</head>
-
-<body>
-        {{>navbar/nav}}
     <div style="margin-top:10px"  class="container all">
         <input type="text"  id="user_id" hidden value="{{userId}}">
            <input type="text"  id="user_id" hidden value="{{thisUserName}}">
@@ -48,74 +42,7 @@
                     </section>
                 </div>
             </div>
-            {{!-- <div style="width:100%;height:30px;background:#eee4"></div> --}}
         {{/each}}
         {{/if}}
         </div>
     </div>
-=======
-
-    <div class="container-fluid landingpage">
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-            <div class="container navbarNavbar2">
-                <a class="navbar-brand js-scroll-trigger" href="#page-top">Reddigram</a>
-                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-                    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger tosubmit" href="/submit/{{thisUserId}}">Post</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="/contact/{{thisUserId}}">Contact</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="/logout">Log Out</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </div>
-    <!-- END OF NAVIGATION -->
-
-    <!-- POSTS -->
-    <div class="container-fluid text-center posts d-flex flex-column align-items-center m-5">
-       <div style="display: none">
-           <input type="text"  id="user_id" hidden value="{{thisUserId}}">
-       </div>
-        {{#if posts}}
-            {{#each posts}}
-                <div class="row">
-                    <div class="col-xs-12">
-                        <div class="text-center">
-                        <h4>{{this.author}}</h4>
-                        <div class="description">
-                                                 {{this.body}}
-                        </div>
-                            <div class="row photos-wrap">
-                            <!-- Instafeed target div -->
-                                <div id="instafeed"></div>
-                                <!-- The following HTML will be our template inside instafeed -->
-                                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-                                        <div class="photo-box">
-                                            <div class="image-wrap">
-                                            <img src="{{this.image}}">
-                                            </div>
-                                        
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                            <i class="fas fa-arrow-up like" data-post_id="{{this.id}}" id='{{this.id}}-up'></i>&nbsp;&nbsp;
-                            <span>{{this.vote}}</span>&nbsp;&nbsp;
-                            <i class="fas fa-arrow-down dislike" data-post_id="{{this.id}}"  id="{{this.id}}-down"></i>
-                    </div>
-                </div>
-            {{/each}}
-        {{/if}}
-    </div> 
-
