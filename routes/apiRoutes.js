@@ -69,6 +69,7 @@ module.exports = function(app) {
       });
     });
   });
+
   app.get("/home/:id", (req, res) => {
     let userId = req.params.id;
     db.Post.findAll({
@@ -224,6 +225,7 @@ module.exports = function(app) {
       }
     ).then(() => {
       db.Likes.findById(id).then(data => {
+
         console.log("dislike " + data.postId);
         res.redirect("/api/decrement/" + data.postId);
       });

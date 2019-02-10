@@ -7,6 +7,7 @@ $(document).ready(function() {
     for (var i = 0; i < result.length; i++) {
       // eslint-disable-next-line eqeqeq
 
+
       if (result[i].isLiked) {
         console.log(result[i].isLiked);
         $(`#${result[i].postId}-up`).css("color", "red");
@@ -20,6 +21,7 @@ $(document).ready(function() {
       }
     }
   });
+
   $(".like").on("click", function() {
     let postId = $(this).data("post_id");
     let newLike = {
@@ -42,6 +44,7 @@ $(document).ready(function() {
       postId: postId,
       isLiked: false,
       disLiked: true
+
     };
     $.ajax("/api/dislike/", {
       type: "POST",

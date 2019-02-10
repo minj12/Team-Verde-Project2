@@ -1,3 +1,4 @@
+
   <link rel="stylesheet" href="/styles/contact.css">
 </head>
 
@@ -89,3 +90,57 @@
             <i class="fab fa-twitter"></i>
         </div>
     </div>
+=======
+
+    <div class="container-fluid landingpage">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <div class="container navbarNavbar2">
+                <a class="navbar-brand js-scroll-trigger" href="#page-top">Start Bootstrap</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="/home/{{userId}}">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="/submit/{{userId}}">Post</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="/logout">Log Out</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    </div>
+
+<div id="main-container" class="container">
+
+    <section class="main-section">
+        <h1>Reddi A Gram: </h1>
+
+        <form id="contact-form">
+            <ul>
+                <li>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="John Smith" required="required">
+                </li>
+                <li>
+                    <label for="email">Email:</label>
+                    <input type="email" id="subject" name="email" placeholder="subject" required="required">
+                </li>
+                <li>
+                    <label for="message">Message:</label>
+                    <input id="message" name="message" required="required"></textarea>
+                </li>
+            </ul>
+            <input type="submit">
+        </form>
+
+    </section>
+
+</div>
