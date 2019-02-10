@@ -1,48 +1,45 @@
-
 {{>headers/homes}}
 {{>navbar/nav}}
 
-    <div style="margin-top:10px"  class="container all">
-        <input type="text"  id="user_id" hidden value="{{userId}}">
-           <input type="text"  id="user_id" hidden value="{{thisUserName}}">
-        <div style="background: rgba(255,255,255,1.0);" class="col-md-5">
-            {{#if posts}}
-            {{#each posts}}
-            <div style="margin-top:10px;background:rgba(7, 60, 152, 0.4)"  class="panel panel-default">
-                <div class="panel-body">
-                    <section class="post-heading">
-                        <div class="row">
-                            <div class="col-md-11">
-                                <div class="media">
-                                    <div class="media-body">
-                                        
-                                            <h4 class="media-heading">{{this.author}}</h4>
-                                        
-                                    </div>
+<div style="margin-top:10px" class="container all">
+    <input type="text" id="user_id" hidden value="{{userId}}">
+    <input type="text" id="user_id" hidden value="{{thisUserName}}">
+    <div style="background: rgba(255,255,255,1.0);" class="col-md-5">
+        {{#if posts}}
+        {{#each posts}}
+        <div style="margin-top:10px;background:rgba(7, 60, 152, 0.4)" class="panel panel-default">
+            <div class="panel-body">
+                <section class="post-heading">
+                    <div class="row">
+                        <div class="col-md-11">
+                            <div class="media">
+                                <div class="media-body">
+
+                                    <h4 class="media-heading">{{this.author}}</h4>
+
                                 </div>
                             </div>
                         </div>
-                    </section>
-                    <section class="post-body">
-                        <img src="{{this.image}}"
-                            alt="" style="width: 100%">
-                        <p>{{this.body}}
-                        </p>
-                    </section>
-                    <section class="post-footer">
-                        <hr>
-                        <div class="post-footer-option container">
-                            <ul class="list-unstyled">
-                                <li><i class="fas fa-arrow-up like" data-post_id="{{this.id}}" id='{{this.id}}-up'></i></li>
-                                <li><span>{{this.vote}}</span></li>
-                                <i class="fas fa-arrow-down dislike" data-post_id="{{this.id}}"  id="{{this.id}}-down"></i> 
-                            </ul>
-                        </div>
-                        
-                    </section>
-                </div>
+                    </div>
+                </section>
+                <section class="post-body">
+                    <img src="{{this.image}}" alt="" style="width: 100%">
+                    <p>{{this.body}}
+                    </p>
+                </section>
+                <section class="post-footer">
+                    <hr>
+                    <div class="post-footer-option container">
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-arrow-up like" data-post_id="{{this.id}}" id='{{this.id}}-up'></i></li>
+                            <li><span>{{this.vote}}</span></li>
+                            <i class="fas fa-arrow-down dislike" data-post_id="{{this.id}}" id="{{this.id}}-down"></i>
+                        </ul>
+                    </div>
+                </section>
             </div>
+        </div>
         {{/each}}
         {{/if}}
-        </div>
     </div>
+</div>
