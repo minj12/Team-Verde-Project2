@@ -6,7 +6,7 @@ var db = require("../models"),
   cookieParser = require("cookie-parser"),
   cookieSession = require("cookie-session");
 auth(passport);
-module.exports = function(app) {
+module.exports = function (app) {
   app.use(passport.initialize());
 
   app.use(
@@ -49,10 +49,10 @@ module.exports = function(app) {
       req.session.token = req.user.token;
       res.redirect(
         "/home/" +
-          req.user.profile.id +
-          "/" +
-          req.user.profile.name.givenName +
-          req.user.profile.name.familyName
+        req.user.profile.id +
+        "/" +
+        req.user.profile.name.givenName +
+        req.user.profile.name.familyName
       );
     }
   );
@@ -82,7 +82,7 @@ module.exports = function(app) {
     });
   });
 
-  app.get("/api/increment/:id", function(req, res) {
+  app.get("/api/increment/:id", function (req, res) {
     db.Post.update(
       { vote: Sequelize.literal("vote + 1") },
       { where: { id: req.params.id } }
@@ -90,7 +90,8 @@ module.exports = function(app) {
       res.status(200).end();
     });
   });
-  app.get("/api/decrement/:id", function(req, res) {
+
+  app.get("/api/decrement/:id", function (req, res) {
     db.Post.update(
       { vote: Sequelize.literal("vote - 1") },
       { where: { id: req.params.id } }
@@ -98,6 +99,7 @@ module.exports = function(app) {
       res.status(200).end();
     });
   });
+
   app.post("/api/like/", (req, res) => {
     let postId = req.body.postId;
     let userId = req.body.userId;
@@ -158,6 +160,7 @@ module.exports = function(app) {
         });
       });
   });
+
   app.post("/api/dislike/", (req, res) => {
     let postId = req.body.postId;
     let userId = req.body.userId;
@@ -208,6 +211,7 @@ module.exports = function(app) {
         });
       });
   });
+
   app.get("/api/like/:id", (req, res) => {
     let id = req.params.id;
     db.Likes.update(
@@ -224,6 +228,7 @@ module.exports = function(app) {
       });
     });
   });
+
   app.get("/api/dislikes/:id", (req, res) => {
     let id = req.params.id;
     db.Likes.update(
@@ -241,6 +246,7 @@ module.exports = function(app) {
       });
     });
   });
+
   app.get("/api/likedby/:id", (req, res) => {
     db.Likes.findAll({
       where: {

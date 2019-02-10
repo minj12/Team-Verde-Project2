@@ -1,40 +1,43 @@
-
 {{>headers/post}}
 {{>navbar/nav}}
 
+<div class="row contianer-fluid postForm">
+    <div class="  postHeader animated fadeIn slow col-lg-6 col-md-6 col-sm-12 xol-xs-12
+        col-lg-6 col-md-6 col-sm-12 xol-xs-12 ">
+        <img src="https://media.giphy.com/media/12WawXb61sDRMA/giphy.gif" style="width:300px;height:300px;"
+            class="imgForm"><br><br>
+        <h1 class="text-center">Create your post here</h1>
+        <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Totam, dicta saepe!
+            Necessitatibus nihil itaque tempora, magnam magni consequatur debitis dicta.</p>
+    </div>
 
-    <div class="row">
-
-        <div  class=" animated fadeIn slow col-lg-12 col-md-6 col-sm-12 xol-xs-12
-        text-center">
-            <img src="https://media.giphy.com/media/12WawXb61sDRMA/giphy.gif" style="width:250px;height:250px;"
-                class="imgForm"><br><br>
-              <h3 class="text-center" style="color: red">Post a Reddigram for people to up-vote to the highest heavens or down-vote into oblivion.</h3>
-            
+    <div class=" container-fluid formPage animated fadeIn slow text-center col-lg-6 col-md-6 col-sm-12 xol-xs-12
+        col-lg-6 col-md-6 col-sm-12 xol-xs-12" style="width:30%;margin:0 auto;">
+        <div style="display:none">
+            <input type="text" id="this_user" value="{{userId}}" hidden="">
+            <input type="text" id="author" value="{{thisUserName}}" hidden>
         </div>
-</div>
-<div class="row">
-        <div class=" container-fluid formPage animated fadeIn slow text-center col-lg-6 col-md-6 col-sm-12 xol-xs-12
-        " style="width:30%;margin:0 auto;">
-         <div style="display:none">
-                <input type="text" id="this_user" value="{{userId}}" hidden="">
-                <input type="text" id="author" value="{{thisUserName}}" hidden>
+        <form action="/posts" method="POST">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Author</label>
+                <input type="text" name="author" class="form-control" id="exampleInputEmail1"
+                    aria-describedby="emailHelp" placeholder="Author">
             </div>
-            <form action="/posts" method="POST">
-               
-                <div class="form-group">
-                    <h4>Just upload you image by clicking this tiny little icon bellow</h4>
-                     <label for="file-upload">
-                        <i class="fas fa-upload"></i></label>
-                    <input type="file" id="file-upload" style="display: none">
-                </div>
-                <div style="margin: auto !important" class="form-group shadow-textarea">
-                    <label for="exampleFormControlTextarea6">Then write the story behind this beatiful picture</label>
-                    <textarea id="caption" class="form-control z-depth-1" id="exampleFormControlTextarea6" rows="3"
-                        placeholder="Write something here..."></textarea>
-                </div><br>
-                <button type="button" class="btn loginBtn">Post</button>
-            </form>
- 
-        </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Image</label>
+                <input type="text" name="image" class="form-control" id="exampleInputPassword1" placeholder="Image">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Caption</label>
+                <input type="text" name="image" class="form-control" id="exampleInputPassword1" placeholder="Image">
+            </div>
+            <div class="form-group shadow-textarea">
+                <label for="exampleFormControlTextarea6">Type your content here</label>
+                <textarea class="form-control z-depth-1" id="exampleFormControlTextarea6" rows="3"
+                    placeholder="Write something here..."></textarea>
+            </div><br>
+            <button type="button" class="btn loginBtn">Post</button>
+        </form>
+        <!-- <img class="imgForm" src="https://cdn.dribbble.com/users/380540/screenshots/1833690/icon-diagonal.gif" style="width:400px;height:300px;"> -->
+    </div>
 </div>

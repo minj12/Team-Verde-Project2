@@ -1,3 +1,46 @@
+.postForm{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  align-self: center;
+  overflow:both;
+  border: 1px solid rgb(255, 255, 255);
+  height: 100vh;
+  width: 100%;
+  /* background: url(https://opengameart.org/sites/default/files/Preview4.jpg) no-repeat; */
+  background-size: cover;
+  padding-top: 100px;
+  color: rgb(255, 255, 255);
+}
+
+.postHeader{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  align-content: center;
+  border-right: 1px solid rgb(0, 0, 0);
+  height: 45vh;
+  padding-right: 50px;
+  width: 50%;
+  flex-wrap:wrap;
+  background: rgb(254,254,255);
+  color: black;
+  display: block;
+}
+
+img{
+margin:0px 300px;
+box-shadow: 5px 5px 5px rgba(173, 173, 173, 0.616) !important;
+
+}
+
+.form-control {
+  width: 500px !important;
+  box-shadow: 5px 5px 5px rgba(173, 173, 173, 0.616) !important;
+}
+
 .loginBtn{
   background: rgb(48,79,146) !important;
   color: white !important;
@@ -12,3 +55,10 @@
   border: 1px solid;
   box-shadow: 5px 5px  #dfdede;
 }
+
+.formPage{
+  background: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+}
+
