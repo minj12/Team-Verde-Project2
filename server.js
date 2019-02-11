@@ -1,3 +1,4 @@
+//Dependencies
 require("dotenv").config();
 var express = require("express"),
  exphbs = require("express-handlebars");
@@ -8,7 +9,7 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 var db = require("./models");
 
-
+// Port for test server
 var PORT = process.env.PORT || 7500;
 
 
