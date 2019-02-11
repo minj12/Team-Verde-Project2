@@ -5,10 +5,9 @@ a{
 
 body{
   font-family:'helvetica';
-  background: url(/styles/images/bg.jpg); 
+  background: url(https://wearenolte.com/wp-content/uploads/2018/01/Freelancer-or-Agency-Contractor.png) no-repeat;
   background-size: cover;   
   background-attachment: fixed;
-  background-position-x: -500px;
 }
 
 /*-- Content Style --*/
