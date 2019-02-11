@@ -2,12 +2,12 @@
   margin:0;
   padding:0;
 }
-
+/* Navbar Styling */
 #mainNav{
   font-weight: 500;
   box-shadow: 1px 1px  #c8c8c89d;
 }
-
+/* Animation code */
 .heartBeat {
   animation-duration: 1s;
   animation-delay: 1s;
@@ -22,7 +22,7 @@
     display:inline-block;
     text-align:center;
 }
-
+/* Hovering effects */
 a:hover {
     font-weight:bold;
 }
@@ -34,7 +34,8 @@ a::after {
     overflow: hidden;
     visibility: hidden;
 }
-
+ 
+/* Image styling */
 img {
   width: 20em;
   height: 12em;
@@ -52,7 +53,7 @@ img {
   background-position-y: -450px;
   background-attachment: fixed;
 }
-
+/* Main page image */
 .landingpageP{
   height: 70vh;
   width: 100%;
