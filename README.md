@@ -32,8 +32,12 @@ npm install mysql2 sequelize express express-handlebars parser
 2. Press to down-vote by pressing the down arrow. Image loses counted vote.
 3. Feeling guitly or Disliked by accident? press down arrow again. Dislike will get uncounted for.
 
-#### D. Post and add a description for it
-1. 
+#### D. Post and add a description for image.
+1. To post an image go to 'Post' locate on navigation bar on top.
+2. Press icon or image as directed on page to browse image to post.
+3. use window to locate image.
+4. Press post.
+5. Look at home to bottom of page to see posted image.
 
 ## Technologies
 
