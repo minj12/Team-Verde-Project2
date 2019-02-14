@@ -18,7 +18,7 @@ npm install mysql2 sequelize express express-handlebars parser
 ```
 ## Directions for users
 #### A. Log In
-1. Press button
+1. In order to participate in Reddigram, press 'Log in to get Started" button
 2. Pick or make an Google account
 3. Welcome to Reddigram!
 
@@ -30,7 +30,7 @@ npm install mysql2 sequelize express express-handlebars parser
 #### C. Down-Vote an image
 1. Be at 'Home' page to see all images posted.
 2. Press to down-vote by pressing the down arrow. Image loses counted vote.
-3. Feeling guitly or Disliked by accident? press down arrow again. Dislike will get uncounted for.
+3. Feeling guitly or disliked by accident? Press on down arrow again. Dislike will get uncounted for.
 
 #### D. Post and add a description for image.
 1. To post an image go to 'Post' locate on navigation bar on top.
